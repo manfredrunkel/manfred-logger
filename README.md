@@ -5,17 +5,23 @@ This document describes Architecture and Design of manfred-logger component.
 **Architecture and Design**
 
 Requirements:
-º Logger component should be used on any Java project.
-º Logger server can receives messages from specific applications.
-º Logger service must be as a cloud application.
+Logger component should be used on any Java project.
+
+Logger server can receives messages from specific applications.
+
+Logger service must be as a cloud application.
+
 
 **Scenarios:**
 1) Logger component should send Log information through Internet to remote server. It should work even when remote server is offline, persisting messages locally and sending when server is up again. Message should be sent asynchronously.
+
 2) Logger server must receive messages from any logger application. 
+
 3) Application that uses logger component should not be interfered (pausing, waiting some execution, etc). It should execute normally even when some error happens on logger component.
 
 **Restrictions:**
 Logger component must be created with Java.
+
 Logger messages must be sent over network.
 
 **Components**
@@ -24,10 +30,15 @@ Logger messages must be sent over network.
 
 **manfred-logger:** component that contains logic to be used to log
 information. 
+
 **manfred-business:** contains business object logic. Business roles are inside this component, using BPO and DAO architecture. 
+
 **manfred-framework:** offers useful methods for all projects. 
+
 **message-receiver:** component that receives messages on server.
+
 **manfred-producer:** component that sends messages on client.
+
 
 Deployment Diagram
 
@@ -37,13 +48,21 @@ Deployment diagram contains components that are useful for using manfred-logger 
 
 
 **Application:** Application that uses manfred-logger plugin.
+
 **Manfred-logger:** library that contains logic to log messages on remote server.
-**Broker (ActiveMQ):** on both nodes (application-server) it's the broker that sends log and receives acknowledge. It contains the logic that control this flow.
+
+**Broker (ActiveMQ):** on both nodes (application-server) it's the broker that sends log and receives acknowledge. It contains the logic that control this flow
+
 **TCP (Log VO Object):** Communication between Application and Server is TCP based, and contains the Object LogVO with relative log information.
+
 Server: server where resides application that receives all log messages.
+
 **Application Queue:** Queue that receives messages that is application based.
+
 **E-commerce Queue (Example):** Queue that receives messages related to e-commerce queue.
+
 **Cassandra Database:** Database that stores log data.
+
 
 **Sequence Diagram**
 
