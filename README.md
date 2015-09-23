@@ -134,3 +134,7 @@ Open command-line program
 
 3) If it's necessary, please change -Dport to another port that is not in use.
 
+**License**
+
+GNU AFFERO GENERAL PUBLIC LICENSE
+
