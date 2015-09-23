@@ -1,0 +1,1 @@
+CREATE TABLE keylogger.log(id uuid, application text, date timestamp, message text, type text, PRIMARY KEY(id,type));
