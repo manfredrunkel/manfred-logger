@@ -40,7 +40,7 @@ information.
 **manfred-producer:** component that sends messages on client.
 
 
-Deployment Diagram
+**Deployment Diagram**
 
 Deployment diagram contains components that are useful for using manfred-logger component. Every component will be detailed below:
 
@@ -55,7 +55,7 @@ Deployment diagram contains components that are useful for using manfred-logger 
 
 **TCP (Log VO Object):** Communication between Application and Server is TCP based, and contains the Object LogVO with relative log information.
 
-Server: server where resides application that receives all log messages.
+**Server:** server where resides application that receives all log messages.
 
 **Application Queue:** Queue that receives messages that is application based.
 
