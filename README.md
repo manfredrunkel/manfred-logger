@@ -12,7 +12,8 @@ Logger server can receives messages from specific applications.
 Logger service must be as a cloud application.
 
 
-**Scenarios:**
+**Scenarios**
+
 1) Logger component should send Log information through Internet to remote server. It should work even when remote server is offline, persisting messages locally and sending when server is up again. Message should be sent asynchronously.
 
 2) Logger server must receive messages from any logger application. 
