@@ -109,7 +109,9 @@ Example: IP:PORT, (192.168.0.1:6161)
 To deploy server that receives messages, please check:
 
 1) If Java 7 JRE is installed.
+
 2) If database started correctly.
+
 3) Check for a port that is not used or filtered by a firewall to receive log messages.
 
 To Start:
@@ -117,12 +119,18 @@ To Start:
 Open command-line program.
 
 1) Access folder where receiver.jar is located.
+
 2) Access folder apps\apache-cassandra-2.1.8\bin
+
 3) Type "cassandra" and press enter.
+
 4) Wait until database starts.
 
 Open command-line program
 
 1) Access folder where receiver.jar is located.
+
 2) Type "java -jar -Dport=8585 receiver.jar ".
+
 3) If it's necessary, please change -Dport to another port that is not in use.
+
